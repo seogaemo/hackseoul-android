@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_grey_stroke"
+    android:layout_marginHorizontal="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/type_text"
+        style="@style/Medium13"
+        android:layout_width="0dp"
+        android:gravity="start|top"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/Text_Default_Quaternary"
+        app:layout_constraintEnd_toStartOf="@+id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/Background_Base_Border"
+        android:id="@+id/line"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="127dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_marginStart="-1dp"
+        android:maxLines="2"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="8dp"
+        android:gravity="center_vertical|start"
+        android:background="@drawable/background_white_stroke"
+        style="@style/Medium13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Text_Default_Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
