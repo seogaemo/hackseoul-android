@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    app:cardCornerRadius="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Background_Base_Elevated"
+    app:cardElevation="0dp"
+    android:layout_marginTop="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            style="@style/SemiBold13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이러쿵저러쿵어쩌구저쩌구"
+            android:textColor="@color/Text_Default_Primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/content_text"
+            style="@style/Medium13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="오늘은 정말 특별한 날이에요. 아침부터 해가 눈부시게 빛나고, 새들의 지저귐 소리가 어느 때보다도 경쾌하게 들려오네요. 이런 날은 밖으로 나가서 산책을 하거나, 좋아하는 카페에서 차를 마시며 책을 읽는 것도 좋을 것 같아요. 사람들의 웃는 얼굴을 보면 마음까지 환해지는 기분이 들어요. 일상의 소소한 행복을 찾는 것, 그것이 바로 우리가 살아가는 이유 아닐까요? 때로는 바쁜 일상 속에서 잠시 멈춰 서서 주변을 둘러보는 여유를 갖는 것도 중요해요. 그 속에서 새로운 영감을 얻거나, 잊고 있던 행복을 다시 찾을 수 있으니까요."
+            android:textColor="@color/Text_Default_Quaternary"
+            app:layout_constraintStart_toStartOf="@+id/title_text"
+            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
