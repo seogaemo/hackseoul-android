@@ -1,16 +1,16 @@
 package com.seogaemo.hackseoul_android.view
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.seogaemo.hackseoul_android.adapter.JobHistoryAdapter
 import com.seogaemo.hackseoul_android.adapter.TableAdapter
 import com.seogaemo.hackseoul_android.data.JobHistory
 import com.seogaemo.hackseoul_android.data.Table
 import com.seogaemo.hackseoul_android.databinding.ActivityDistributionBinding
+import com.seogaemo.hackseoul_android.util.BaseActivity
 import com.seogaemo.hackseoul_android.util.SpacingItemDecoration
 
-class DistributionActivity : AppCompatActivity() {
+class DistributionActivity : BaseActivity() {
     private lateinit var binding: ActivityDistributionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

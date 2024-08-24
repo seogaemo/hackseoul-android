@@ -8,9 +8,10 @@ import com.seogaemo.hackseoul_android.adapter.TableAdapter
 import com.seogaemo.hackseoul_android.data.Distribution
 import com.seogaemo.hackseoul_android.data.Table
 import com.seogaemo.hackseoul_android.databinding.ActivityProductBinding
+import com.seogaemo.hackseoul_android.util.BaseActivity
 import com.seogaemo.hackseoul_android.util.SpacingItemDecoration
 
-class ProductActivity : AppCompatActivity() {
+class ProductActivity : BaseActivity() {
     private lateinit var binding: ActivityProductBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +42,7 @@ class ProductActivity : AppCompatActivity() {
                     Table("E-mail", "dayoung048@naver.com"),
                     Table("사업장소재지", "경기도 의정부시 산단로68번길 51\n용현동"),
                     Table("통신판매 신고번호", "제2023-의정부송산-0233호"),
-                    Table("사업장번호", "397-85-02404"),
+                    Table("사업자번호", "397-85-02404"),
                 )
             )
             this.addItemDecoration(SpacingItemDecoration())

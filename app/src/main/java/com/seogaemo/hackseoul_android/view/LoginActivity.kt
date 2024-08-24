@@ -3,10 +3,10 @@ package com.seogaemo.hackseoul_android.view
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.seogaemo.hackseoul_android.databinding.ActivityLoginBinding
+import com.seogaemo.hackseoul_android.util.BaseActivity
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
     private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

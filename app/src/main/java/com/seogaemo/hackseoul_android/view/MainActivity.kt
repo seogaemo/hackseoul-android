@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowInsetsController
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.zxing.BarcodeFormat
@@ -14,8 +13,9 @@ import com.journeyapps.barcodescanner.BarcodeResult
 import com.journeyapps.barcodescanner.DefaultDecoderFactory
 import com.seogaemo.hackseoul_android.R
 import com.seogaemo.hackseoul_android.databinding.ActivityMainBinding
+import com.seogaemo.hackseoul_android.util.BaseActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     private lateinit var binding: ActivityMainBinding
     private var currentTime: Long = 0
 
