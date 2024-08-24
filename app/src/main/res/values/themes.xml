@@ -1,9 +1,75 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Hackseoulandroid" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/Background_Base_Elevated</item>
     </style>
 
     <style name="Theme.Hackseoulandroid" parent="Base.Theme.Hackseoulandroid" />
+    
+    <style name="SemiBold13">
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineHeight">20dp</item>
+    </style>
+    <style name="Medium13">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineHeight">20dp</item>
+    </style>
+
+    <style name="SemiBold15">
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineHeight">24dp</item>
+    </style>
+    <style name="Medium15">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineHeight">24dp</item>
+    </style>
+
+    <style name="SemiBold17">
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:lineHeight">28dp</item>
+    </style>
+    <style name="Medium17">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:lineHeight">28dp</item>
+    </style>
+
+    <style name="SemiBold18">
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineHeight">28dp</item>
+    </style>
+    <style name="Medium18">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineHeight">28dp</item>
+    </style>
+
+    <style name="SemiBold12">
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineHeight">16dp</item>
+    </style>
+    <style name="Medium12">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineHeight">16dp</item>
+    </style>
+
+    <style name="SemiBold11">
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:lineHeight">12dp</item>
+    </style>
+    <style name="Medium11">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:lineHeight">12dp</item>
+    </style>
 </resources>
