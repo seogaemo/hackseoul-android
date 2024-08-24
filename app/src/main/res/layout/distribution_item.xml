@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Background_Base_Elevated"
+    android:layout_marginTop="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginStart="12dp"
+        android:id="@+id/company_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/SemiBold13"
+        android:textColor="@color/Text_Default_Primary"
+        android:text="쿠팡"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2000. 00. 00"
+        android:textColor="@color/Text_Default_Quaternary"
+        app:layout_constraintStart_toStartOf="@id/company_text"
+        app:layout_constraintTop_toBottomOf="@+id/company_text" />
+
+    <ImageView
+        android:id="@+id/coupang_image_view"
+        android:layout_marginStart="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coupang_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/company_text"
+        app:layout_constraintStart_toEndOf="@+id/company_text"
+        app:layout_constraintTop_toTopOf="@+id/company_text" />
+
+    <ImageView
+        android:scaleX="-1"
+        app:tint="@color/Text_Default_Tertiary"
+        android:layout_marginEnd="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/left_arrow_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
