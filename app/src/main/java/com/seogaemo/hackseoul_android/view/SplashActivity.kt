@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.seogaemo.hackseoul_android.data.JobHistory
 import com.seogaemo.hackseoul_android.database.SharedPreference
 import com.seogaemo.hackseoul_android.databinding.ActivitySplashBinding
 
@@ -25,18 +26,23 @@ class SplashActivity : AppCompatActivity() {
         val data: Uri? = intent?.data
 
         Handler(Looper.getMainLooper()).postDelayed({
-            if (SharedPreference.isFirst) {
-                startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
-            } else {
-                if (action == Intent.ACTION_VIEW) {
-                    val id = data?.getQueryParameter("id")
-                    val intent = Intent(this@SplashActivity, ProductActivity::class.java)
+
+            if (action == Intent.ACTION_VIEW) {
+                val id = data?.getQueryParameter("id")
+                if (SharedPreference.isFirst) {
+                    val intent = Intent(this@SplashActivity, JobHistoryActivity::class.java)
                     intent.putExtra("id", id)
                     startActivity(intent)
                 } else {
-                    startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                    val intent = Intent(this@SplashActivity, ProductActivity::class.java)
+                    intent.putExtra("id", id)
+                    startActivity(intent)
                 }
+            } else {
+                val intent = Intent(this@SplashActivity, HomeActivity::class.java)
+                startActivity(intent)
             }
+
             finishAffinity()
         }, 1500)
     }

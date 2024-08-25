@@ -1,6 +1,8 @@
 package com.seogaemo.hackseoul_android.network
 
 import com.seogaemo.hackseoul_android.data.CompanyResponse
+import com.seogaemo.hackseoul_android.data.PipLineBody
+import com.seogaemo.hackseoul_android.data.ProditemResponse
 import com.seogaemo.hackseoul_android.data.ProductResponse
 import com.seogaemo.hackseoul_android.data.SignInRequest
 import com.seogaemo.hackseoul_android.data.SignInResponse
@@ -21,12 +23,23 @@ interface RetrofitAPI {
     @GET("company/{id}")
     suspend fun getCompany(
         @Header("Authorization") authorization: String,
-        @Path(value = "id") id : Int
+        @Path(value = "id") id : String
     ): Response<CompanyResponse>
 
     @GET("product/{id}")
     suspend fun getProduct(
         @Header("Authorization") authorization: String,
-        @Path(value = "id") id : Int
+        @Path(value = "id") id : String
     ): Response<ProductResponse>
+
+    @GET("blockchain/proditem/{id}")
+    suspend fun getProdItem(
+        @Header("Authorization") authorization: String,
+        @Path(value = "id") id : String
+    ): Response<ProditemResponse>
+
+    @POST("blockchain/pipeline")
+    suspend fun postPipeline(
+        @Body body: PipLineBody
+    ): Response<Void>
 }

@@ -1,7 +1,9 @@
 package com.seogaemo.hackseoul_android.view
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -17,6 +19,7 @@ import com.journeyapps.barcodescanner.BarcodeCallback
 import com.journeyapps.barcodescanner.BarcodeResult
 import com.journeyapps.barcodescanner.DefaultDecoderFactory
 import com.seogaemo.hackseoul_android.R
+import com.seogaemo.hackseoul_android.database.SharedPreference
 import com.seogaemo.hackseoul_android.databinding.ActivityMainBinding
 import com.seogaemo.hackseoul_android.util.BaseActivity
 
@@ -85,7 +88,17 @@ class MainActivity : BaseActivity() {
 
     private fun createRequest(qrCodeText: String) {
         if (qrCodeText.startsWith("http://") || qrCodeText.startsWith("https://")) {
-
+            val uri = Uri.parse(qrCodeText)
+            val id = uri.getQueryParameter("id")
+            if (SharedPreference.isFirst) {
+                val intent = Intent(this@MainActivity, ProductActivity::class.java)
+                intent.putExtra("id", id)
+                startActivity(intent)
+            } else {
+                val intent = Intent(this@MainActivity, JobHistoryActivity::class.java)
+                intent.putExtra("id", id)
+                startActivity(intent)
+            }
         }
     }
 
