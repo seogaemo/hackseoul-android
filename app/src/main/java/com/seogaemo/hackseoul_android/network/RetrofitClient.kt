@@ -21,7 +21,7 @@ object RetrofitClient {
     fun getInstance(): Retrofit {
         if(instance == null) {
             instance = Retrofit.Builder()
-                .baseUrl("")
+                .baseUrl(com.seogaemo.hackseoul_android.BuildConfig.BASE_URL)
                 .client(okHttpClient)
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
